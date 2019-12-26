@@ -14,7 +14,8 @@ var indexRoutes = require("./routes/index"),
     movieRoutes = require("./routes/movies");
 
 seedDb();
-mongoose.connect("mongodb://localhost/movie-app-v6",{useNewUrlParser: true, useFindAndModify: true, useCreateIndex: true, useUnifiedTopology: true});
+// mongoose.connect("mongodb://localhost/movie-app-v6",{useNewUrlParser: true, useFindAndModify: true, useCreateIndex: true, useUnifiedTopology: true});
+mongoose.connect("mongodb+srv://Dinesh:Dinesh95@cluster0-ijqoh.mongodb.net/test?retryWrites=true&w=majority", {useNewUrlParser: true, useFindAndModify: true, useCreateIndex: true, useUnifiedTopology: true}); 
 
 var Movie = require("./models/movie");
 var Comment = require("./models/comments");
